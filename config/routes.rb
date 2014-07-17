@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :pubs
+
   get 'home/index'
   get 'pubs' => 'home#pubs'
 
