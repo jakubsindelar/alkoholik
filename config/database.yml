@@ -1,9 +1,13 @@
 
 development:
-  adapter: sqlite3
+  adapter: mysql2
   pool: 5
   timeout: 5000
-  database: db/development.sqlite3
+  database: alkoholik
+  username: root
+  password: ilidan
+  encoding: utf8
+  
 
 test:
   adapter: sqlite3
