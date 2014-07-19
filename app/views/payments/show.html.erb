@@ -25,5 +25,10 @@
   <%= @payment.date %>
 </p>
 
+<p>
+  <strong>User:</strong>
+  <%= @payment.user.name if @payment.user.present? %>
+</p>
+
 <%= link_to 'Edit', edit_payment_path(@payment) %> |
 <%= link_to 'Back', payments_path %>

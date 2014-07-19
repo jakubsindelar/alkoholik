@@ -15,5 +15,12 @@
   <%= @user.city %>
 </p>
 
+<p>
+  <strong>Payments:</strong>
+  <% @user.payments.each do |payment| %>
+    <%= link_to payment.item, payment %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
