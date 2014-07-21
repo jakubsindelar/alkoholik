@@ -1,34 +1,34 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
+  <strong>Uživatel:</strong>
   <%= @payment.user_id %>
 </p>
 
 <p>
-  <strong>Pub:</strong>
+  <strong>Hospoda:</strong>
   <%= @payment.pub_id %>
 </p>
 
 <p>
-  <strong>Item:</strong>
+  <strong>Věc:</strong>
   <%= @payment.item %>
 </p>
 
 <p>
-  <strong>Amount:</strong>
+  <strong>Cena:</strong>
   <%= @payment.amount %>
 </p>
 
 <p>
-  <strong>Date:</strong>
+  <strong>Datum:</strong>
   <%= @payment.date %>
 </p>
 
 <p>
-  <strong>User:</strong>
+  <strong>Uživatel:</strong>
   <%= @payment.user.name if @payment.user.present? %>
 </p>
 
-<%= link_to 'Edit', edit_payment_path(@payment) %> |
-<%= link_to 'Back', payments_path %>
+<%= link_to 'Editovat', edit_payment_path(@payment) %> |
+<%= link_to 'Zpět', payments_path %>

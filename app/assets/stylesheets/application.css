@@ -18,4 +18,4 @@ html, body {background-color: orange; background-image: url("header.png");backgr
 /*#body {background-image: url("background.jpg");min-height: 200%; margin: auto; margin-top: 0px;color: orange; font-size:18pt;}*/
 .menu-item {display: inline; font-size: 20pt; font-size: blod;}
 #pubs {margin:auto;color:white;}
-
+.table-hover tbody tr:hover td {background: aqua; color:green;}

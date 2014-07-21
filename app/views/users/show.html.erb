@@ -1,26 +1,26 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Jméno:</strong>
   <%= @user.name %>
 </p>
 
 <p>
-  <strong>Surname:</strong>
+  <strong>Příjmení:</strong>
   <%= @user.surname %>
 </p>
 
 <p>
-  <strong>City:</strong>
+  <strong>Město:</strong>
   <%= @user.city %>
 </p>
 
 <p>
-  <strong>Payments:</strong>
+  <strong>Pladby:</strong>
   <% @user.payments.each do |payment| %>
     <%= link_to payment.item, payment %>
   <% end %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Editovat', edit_user_path(@user) %> |
+<%= link_to 'Zpět', users_path %>

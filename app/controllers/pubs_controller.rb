@@ -28,7 +28,7 @@ class PubsController < ApplicationController
 
     respond_to do |format|
       if @pub.save
-        format.html { redirect_to @pub, notice: 'Pub was successfully created.' }
+        format.html { redirect_to @pub, notice: 'Hospoda byla úzpěšně přidána.' }
         format.json { render :show, status: :created, location: @pub }
       else
         format.html { render :new }
