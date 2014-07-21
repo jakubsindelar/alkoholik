@@ -15,9 +15,9 @@
   <tbody>
     <% @payments.each do |payment| %>
       <tr class="testovacka">
-        <td><%= "#{payment.user.name} #{payment.user.surname}" %></td>
+        <td><%= "#{payment.user.name} #{payment.user.surname}" if payment.user.present? %></td>
         <td><%= "#{payment.pub.name}" if payment.pub.present? %></td>
-        <td><%= "#{payment.item.name}" if payment.item.present? %></td>
+        <td><%= payment.item %></td>
         <td><%= payment.amount %></td>
         <td><%= payment.date %></td>
         <td><%= link_to 'Show', payment %></td>
