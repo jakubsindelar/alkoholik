@@ -1,6 +1,6 @@
 <h1>Listing payments</h1>
 
-<table>
+<table id= "pubs" class="table table-hover" style="background-color:maroon; max-width:60%; color:white">
   <thead>
     <tr>
       <th>User</th>
@@ -15,8 +15,8 @@
   <tbody>
     <% @payments.each do |payment| %>
       <tr>
-        <td><%= payment.user_id %></td>
-        <td><%= payment.pub_id %></td>
+        <td><%= "#{payment.user.name} #{payment.user.surname}" %></td>
+        <td><%= "#{payment.pub.name}" if payment.pub.present? %></td>
         <td><%= payment.item %></td>
         <td><%= payment.amount %></td>
         <td><%= payment.date %></td>
