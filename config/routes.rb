@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :names
+  devise_for :users
   resources :items
 
   resources :payments
