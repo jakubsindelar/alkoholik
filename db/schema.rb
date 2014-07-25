@@ -11,6 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20140725233637) do
+
+  create_table "payments", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "pub_id"
+    t.integer  "amount"
+    t.datetime "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pubs", force: true do |t|
+    t.string   "name"
+    t.string   "city"
+    t.string   "street"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

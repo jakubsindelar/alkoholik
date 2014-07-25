@@ -183,3 +183,15 @@ Started GET "/assets/application.js?body=1" for 192.168.169.1 at 2014-07-26 01:2
   [1m[36m (6.0ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
   [1m[35m (36.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
   [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreatePubs (20140725233415)
+  [1m[35m (7.6ms)[0m  CREATE TABLE `pubs` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `city` varchar(255), `street` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.9ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140725233415')
+  [1m[36m (3.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePayments (20140725233637)
+  [1m[35m (5.5ms)[0m  CREATE TABLE `payments` (`id` int(11) auto_increment PRIMARY KEY, `user_id` int(11), `pub_id` int(11), `amount` int(11), `date` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.8ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140725233637')
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (2.0ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
