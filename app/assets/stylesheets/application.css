@@ -11,10 +11,5 @@
  * file per style scope.
  *
  *= require_tree .
- *= require bootstrap
  *= require_self
  */
-html, body {background-color: orange;}
-header {background-image: url("header.png"); height: 100px; text-align: center; vertical-align: middle;}
-#body {background-image: url("background.jpg");min-height: 200%; margin: auto; margin-top: 0px;}
-.menu-item {display: inline; font-size: 20pt; font-size: blod;}
