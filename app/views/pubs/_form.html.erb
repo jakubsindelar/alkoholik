@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name, 'Jméno podniku' %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :city %><br>
+    <%= f.label :city, 'Město' %><br>
     <%= f.text_field :city %>
   </div>
   <div class="field">
-    <%= f.label :street %><br>
+    <%= f.label :street, 'Ulice' %><br>
     <%= f.text_field :street %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Uložit hospodu' %>
   </div>
 <% end %>

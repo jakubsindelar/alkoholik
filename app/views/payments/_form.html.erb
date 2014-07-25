@@ -12,22 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+    <%= f.label :user_id %>
+    <%= f.select :user_id, options_for_select(User.all.collect{|user| ["#{user.name} #{user.surname}", user.id]}, @payment.user_id), include_blank: true %>
   </div>
   <div class="field">
-    <%= f.label :pub_id %><br>
-    <%= f.number_field :pub_id %>
+    <%= f.label :pub_id %>
+    <%= f.select :pub_id, options_for_select(Pub.all.collect{|pub| ["#{pub.name}", pub.id]}, @payment.pub_id), include_blank: true %>
   </div>
   <div class="field">
-    <%= f.label :amount %><br>
-    <%= f.number_field :amount %>
+    <%= f.label :item, "Věc" %><br>
+    <%= f.text_field :item %>
   </div>
   <div class="field">
-    <%= f.label :date %><br>
-    <%= f.datetime_select :date %>
+    <%= f.label :amount, "Cena" %><br>
+    <%= f.text_field :amount %>
+  </div>
+  <div class="field">
+    <%= f.label :date, "Datum" %><br>
+    <%= f.text_field :date %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Uložit účet" %>
   </div>
 <% end %>

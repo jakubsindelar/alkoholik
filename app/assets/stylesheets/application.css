@@ -11,5 +11,12 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require bootstrap
  *= require_self
  */
+html, body {background-color: orange; background-image: url("header.png");background-repeat: repeat-y; height: 100px; text-align: center; vertical-align: middle;}
+/*#body {background-image: url("background.jpg");min-height: 200%; margin: auto; margin-top: 0px;color: orange; font-size:18pt;}*/
+.menu-item {display: inline; font-size: 20pt; font-size: blod;}
+#pubs {margin:auto;color:white;}
+.table-hover tbody tr:hover td {background: aqua; color:green;}
+#userbox { display: block; width: 300px; position: absolute; right: 0px; top: 0px; }

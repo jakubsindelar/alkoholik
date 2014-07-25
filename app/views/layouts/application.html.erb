@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Alkoholik</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+	<head>
+	  <title>Alkoholik</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<header>
+			<span class="menu-item"><%= link_to "Home", root_path %></span>
+			<span class="menu-item"><%= link_to "Hospody", pubs_path %></span>
+			<span class="menu-item"><%= link_to "Uživatelé", pubs_path %></span>
+			<span class="menu-item"><%= link_to "Pladby", payments_path %></span>
+		</header>
+			<%= yield %>
+	</body>
 </html>
