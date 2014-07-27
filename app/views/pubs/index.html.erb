@@ -16,9 +16,9 @@
         <td><%= pub.name %></td>
         <td><%= pub.city %></td>
         <td><%= pub.street %></td>
-        <td><%= link_to 'Detaily', pub %></td>
-        <td><%= link_to 'Změnit', edit_pub_path(pub) %></td>
-        <td><%= link_to 'Odstranit', pub, method: :delete, data: { confirm: 'Opravdu chcete pokračovat?' } %></td>
+        <td><span><%= link_to 'Detaily' , pub %></td>
+        <td><%= link_to '', edit_pub_path(pub), :class => 'fa fa-pencil' %></td>
+        <td><%= link_to '', pub,  :class => 'fa fa-minus-circle', method: :delete, data: { confirm: 'Opravdu chcete pokračovat?' } %></td>
       </tr>
     <% end %>
   </tbody>
