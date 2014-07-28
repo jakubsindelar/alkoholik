@@ -19,11 +19,7 @@
     <%= f.label :pub_id %>
     <%= f.select :pub_id, options_for_select(Pub.all.collect{|pub| ["#{pub.name}", pub.id]}, @payment.pub_id), include_blank: true %>
   </div>
-  <div class="field">
-    <%= f.label :item, "Věc" %><br>
-    <%= f.text_field :item %>
-  </div>
-  <div class="field">
+   <div class="field">
     <%= f.label :amount, "Cena" %><br>
     <%= f.text_field :amount %>
   </div>
