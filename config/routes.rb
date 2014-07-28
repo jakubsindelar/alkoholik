@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :itineraries
+
   devise_for :users, path: "auth"
   resources :users
 
