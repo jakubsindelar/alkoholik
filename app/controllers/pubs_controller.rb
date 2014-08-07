@@ -1,6 +1,6 @@
 class PubsController < ApplicationController
   before_action :set_pub, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /pubs
   # GET /pubs.json
   def index
