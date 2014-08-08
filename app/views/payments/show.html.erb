@@ -2,29 +2,25 @@
 
 <p>
   <strong>Uživatel:</strong>
-  <%= @payment.user_id %>
+  <%= "#{@payment.user.name} #{@payment.user.name}" if @payment.user.name.present? %>
 </p>
 
 <p>
   <strong>Hospoda:</strong>
-  <%= @payment.pub_id %>
+  <%= "#{@payment.pub.name}" if @payment.pub.name.present? %>
 </p>
 
 
 <p>
   <strong>Cena:</strong>
-  <%= @payment.amount %>
+  <%= @payment.amount %>&nbsp;Kč
 </p>
 
 <p>
   <strong>Datum:</strong>
-  <%= @payment.date %>
+  <%= @payment.date.strftime("%d. %m. %Y") %>
 </p>
 
-<p>
-  <strong>Uživatel:</strong>
-  <%= @payment.user.name if @payment.user.present? %>
-</p>
 
 <%= link_to 'Editovat', edit_payment_path(@payment) %> |
 <%= link_to 'Zpět', payments_path %>
