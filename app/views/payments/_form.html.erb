@@ -15,9 +15,13 @@
     <%= f.label :user_id %>
     <%= f.select :user_id, options_for_select(User.all.collect{|user| ["#{user.name} #{user.surname}", user.id]}, @payment.user_id), include_blank: true %>
   </div>
-  <div class="field">
+    <div class="field">
     <%= f.label :pub_id %>
     <%= f.select :pub_id, options_for_select(Pub.all.collect{|pub| ["#{pub.name}", pub.id]}, @payment.pub_id), include_blank: true %>
+  </div>
+  <div class="field">
+    <%= f.label :note %>
+    <%= f.text_field :note %>
   </div>
    <div class="field">
     <%= f.label :amount, "Cena" %><br>
