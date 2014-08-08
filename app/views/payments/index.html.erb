@@ -19,7 +19,7 @@
         <td><%= "#{payment.pub.name}" if payment.pub.present? %></td>
         <td></td>
         <td><%= payment.amount %></td>
-        <td><%= payment.date %></td>
+        <td><%= payment.date.strftime('%m. %d. %Y') if payment.date.present? %></td>
         <td><%= link_to 'Zobrazit', payment %></td>
         <td><%= link_to 'Editovat', edit_payment_path(payment) %></td>
         <td><%= link_to 'Smazat', payment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
