@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140809122909) do
+ActiveRecord::Schema.define(version: 20140811144046) do
 
   create_table "itineraries", force: true do |t|
     t.string   "name"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20140809122909) do
   create_table "itineraries_payments", id: false, force: true do |t|
     t.integer "itinerary_id"
     t.integer "payment_id"
+    t.integer "count"
   end
 
   create_table "payments", force: true do |t|
