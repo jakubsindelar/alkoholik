@@ -49,3 +49,5 @@ gem 'capistrano-rvm', group: :development
 gem 'bootstrap-glyphicons'
 gem 'devise'
 
+gem 'quiet_assets', group: :development
+
