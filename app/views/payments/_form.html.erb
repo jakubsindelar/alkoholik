@@ -20,8 +20,8 @@
     <%= f.select :pub_id, options_for_select(Pub.all.collect{|pub| ["#{pub.name}", pub.id]}, @payment.pub_id), include_blank: true %>
   </div>
   <div class="field">
-    <%= f.label :itinerary %>
-<%= f.select :id, options_for_select(Itinerary.all.collect{|itinerary| ["#{itinerary.name}", itinerary.id]}, @payment.pub_id), include_blank: true %>
+    <%= f.label :itinerary_ids, "Položky" %>
+    <%= collection_check_boxes(:itinerary_ids, :itinerary_ids, Itinerary.all, :id, :name) %>
   </div>
    <div class="field">
     <%= f.label :amount, "Cena" %><br>

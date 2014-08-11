@@ -13,11 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20140809122909) do
 
-  create_table "customers_orders", id: false, force: true do |t|
-    t.integer "customer_id"
-    t.integer "order_id"
-  end
-
   create_table "itineraries", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -27,11 +22,6 @@ ActiveRecord::Schema.define(version: 20140809122909) do
   create_table "itineraries_payments", id: false, force: true do |t|
     t.integer "itinerary_id"
     t.integer "payment_id"
-  end
-
-  create_table "orders_users", id: false, force: true do |t|
-    t.integer "order_id"
-    t.integer "user_id"
   end
 
   create_table "payments", force: true do |t|
@@ -70,7 +60,7 @@ ActiveRecord::Schema.define(version: 20140809122909) do
     t.string   "last_sign_in_ip"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end
