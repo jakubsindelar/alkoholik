@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :itinerary_ids, "Položky" %>
-    <%= collection_check_boxes(:itinerary_ids, :itinerary_ids, Itinerary.all, :id, :name) %>
+    <%= collection_check_boxes(:payment, :itinerary_ids, Itinerary.all, :id, :name) %>
   </div>
    <div class="field">
     <%= f.label :amount, "Cena" %><br>
