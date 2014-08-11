@@ -1,9 +1,9 @@
-<h1>Listing itineraries</h1>
+<h1>Itinerář produktů</h1>
 
-<table>
+<table id= "pubs" class="table table-hover" style="background-color:maroon; max-width:60%;">
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Položka</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,9 +12,9 @@
     <% @itineraries.each do |itinerary| %>
       <tr>
         <td><%= itinerary.name %></td>
-        <td><%= link_to 'Show', itinerary %></td>
-        <td><%= link_to 'Edit', edit_itinerary_path(itinerary) %></td>
-        <td><%= link_to 'Destroy', itinerary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Zobrazit detaily', itinerary %></td>
+        <td><%= link_to 'Upravit', edit_itinerary_path(itinerary) %></td>
+        <td><%= link_to 'Smazat', itinerary, method: :delete, data: { confirm: 'Opravdu chcete pokračovat?' } %></td>
       </tr>
     <% end %>
   </tbody>
