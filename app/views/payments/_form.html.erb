@@ -23,7 +23,7 @@
       <%= f.label :itinerary_ids, "Položky" %></br>
       <%#= collection_check_boxes(:payment, :itinerary_ids, Itinerary.all, :id, :name), class: 'itinerary_ids' %>
       <%= collection_check_boxes(:payment, :itinerary_ids, Itinerary.all, :id, :name) do |b| %>
-        <%= b.label(class: "payment_itinerary_label") %>
+        <%= b.label(class: "payment_itinerary_label") { "" } %>
         <%= b.check_box(class: "payment_itinerary_checkbox") + b.text %>
       <% end %>
   </div>
