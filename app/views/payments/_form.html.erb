@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :user_id %>
+    <%= f.label :user_id, "Uživatel" %>
     <%= f.select :user_id, options_for_select(User.all.collect{|user| ["#{user.name} #{user.surname}", user.id]}, @payment.user_id), include_blank: true %>
   </div>
     <div class="field">
-    <%= f.label :pub_id %>
+    <%= f.label :pub_id, "Restaurace" %>
     <%= f.select :pub_id, options_for_select(Pub.all.collect{|pub| ["#{pub.name}", pub.id]}, @payment.pub_id), include_blank: true %>
   </div>
   <div class="field">
-    <%= f.label :itinerary_ids, "Položky" %>
+      <%= f.label :itinerary_ids, "Položky" %></br>
     <%= collection_check_boxes(:payment, :itinerary_ids, Itinerary.all, :id, :name) %>
-  </div>
-   <div class="field">
+    </div>
+      <div class="field">
     <%= f.label :amount, "Cena" %><br>
     <%= f.text_field :amount %>
   </div>

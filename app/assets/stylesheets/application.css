@@ -21,3 +21,15 @@ html, body {background-color: orange; background-image: url("header.png");backgr
 #pubs {margin:auto;color:white;}
 .table-hover tbody tr:hover td {background: aqua; color:green;}
 #userbox { display: block; width: 300px; position: absolute; right: 0px; top: 0px; }
+.checkbox_container {
+  display: inline-block;
+  vertical-align: -1px;
+  margin: 5px;
+ }
+.checkbox_container input {
+  display: inline;
+ }
+.checkbox_container .collection_check_boxes{
+  display: inline;
+  vertical-align: -5px;
+ }
